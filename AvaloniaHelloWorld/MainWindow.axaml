@@ -4,6 +4,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="MyApp.MainWindow"
-        Title="MyApp">
-    Welcome to Avalonia!
+        Title="SerialLogger">
+        <Border Background="White"
+          BorderBrush="Black"
+          BorderThickness="2"
+          CornerRadius="3"
+          Padding="4">
+         <Grid Margin="4">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="1.5*" MinWidth="300"/>
+            <ColumnDefinition Width="4*"/>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+           
+            <TextBox Grid.Row="0" Grid.Column="0"/>         
+            <CheckBox Content="AutoScoll" Grid.Row="1" Grid.Column="0"/>
+           
+            <Button Content="Connect" Width="160" Foreground="White" Background="Blue" Grid.Row="1" Grid.Column="1" >Connect</Button>
+            <Button Content="Scan" Width="160" Foreground="White" Background="Blue" Grid.Row="2" Grid.Column="1" >Scan</Button>      
+        </Grid>
+       </Border>
 </Window>
